@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -35,9 +36,59 @@ public class Main {
 //        int[] numbers = {75,87,99};
 //        System.out.print("The average of 75, 87, 99 is "+average(numbers));
         //6.----------------------------------------------------
-        System.out.println("This will check what year is a leap year form 1999 to present year.");
-        leapYearFrom(1999);
-        //
+//        System.out.println("This will check what year is a leap year form 1999 to present year.");
+//        leapYearFrom(1999);
+        //7.----------------------------------------------------
+//        String str = "The dog jumped over the fence.";
+//        sentenceSplitter(str);
+//
+        //8.----------------------------------------------------
+//        int l,w, area;
+//        System.out.println("Enter length and width to calculate the area of a rectangle.");
+//        System.out.print("L: ");
+//        l=input.nextInt();
+//        System.out.print("W: ");
+//        w=input.nextInt();
+//        System.out.printf("The area of a rectangle with L = %d and W=%d is %d\n",l,w,calArea(l,w));
+//
+        //9.---------------------------------------------------------
+//        System.out.println("Random number generator between 1 and range given.");
+//        System.out.print("Enter a range: ");
+//        int range = input.nextInt();
+//        randomNumbers(5,range);
+        //10.---------------------------------------------------------
+//        ArrayList<String> words = new ArrayList<>();
+//        words.add("Hello");
+//        words.add("World");
+//        words.add("Nine");
+//        words.add("Coffee");
+//        words.add("Five");
+//        randomWord(words);
+
+    }
+
+    private static void randomWord(ArrayList<String> words){
+        int index = (int)(Math.random()*(words.size()-1));
+        System.out.println(words.get(index));
+    }
+
+    private static void randomNumbers(int quantity, int range ) {
+        for(int i =0;i<quantity; i++){
+            System.out.print((int)(1+(Math.random()*range))+" ");
+        }
+    }
+
+    private static int calArea(int l, int w) {
+        return l*w;
+    }
+
+    private static void sentenceSplitter(String str) {
+        String[] strArr = str.split(" ");
+        int count=0;
+        for(String s: strArr){
+            count++;
+        }
+        System.out.printf("There are %d words in \"%s\"",count,str);
     }
 
     private static void leapYearFrom(int year) {
